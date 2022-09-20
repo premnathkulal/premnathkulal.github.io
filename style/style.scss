@@ -12,14 +12,17 @@ $black: #040011;
 body {
     transition: 0.2s ease-in-out all;
     height: 100vh;
-    overflow: hidden;
+    width: 100%;
 
     .navbar {
+        top: 0;
         display: flex;
-        background: $primary-blue;
         color: $white;
+        z-index: 1000;
+        position: sticky;
         align-items: center;
         padding: 0.6rem 3rem;
+        background: $primary-blue;
 
         .navbar-toggler {
             display: none;
@@ -68,13 +71,14 @@ body {
     }
 
     .show {
-        height: 100% !important;
+        height: 100vh !important;
         visibility: visible !important;
         transition: all 0.5s linear;
     }
 
     section {
-        min-height: 100vh;
+        padding: 2.5rem 0.5rem !important;
+        height: 100vh;
         font-weight: 600;
     }
 

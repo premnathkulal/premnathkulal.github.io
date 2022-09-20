@@ -4,13 +4,16 @@
 body {
   transition: 0.2s ease-in-out all;
   height: 100vh;
-  overflow: hidden; }
+  width: 100%; }
   body .navbar {
+    top: 0;
     display: flex;
-    background: #14123d;
     color: #ffffff;
+    z-index: 1000;
+    position: sticky;
     align-items: center;
-    padding: 0.6rem 3rem; }
+    padding: 0.6rem 3rem;
+    background: #14123d; }
     body .navbar .navbar-toggler {
       display: none;
       margin-left: auto; }
@@ -37,11 +40,12 @@ body {
       body .navbar #toggler-button #xbar-icon {
         display: none; }
   body .show {
-    height: 100% !important;
+    height: 100vh !important;
     visibility: visible !important;
     transition: all 0.5s linear; }
   body section {
-    min-height: 100vh;
+    padding: 2.5rem 0.5rem !important;
+    height: 100vh;
     font-weight: 600; }
   body .home-screen {
     background: #040011;
