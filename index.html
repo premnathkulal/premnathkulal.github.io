@@ -7,14 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/56aebcbfcc.js" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Premnath Kulal</title>
 </head>
 
 <body>
     <nav class="navbar">
         <a class="navbar-brand" href="#">
-            <img src="assets/my-logo.svg" alt="my-logo" width="35rem">
+            <img src="assets/my-logo.svg" alt="my-logo" width="35rem" />
         </a>
         <div class="navbar-contents" id="navbarSupportedContent">
             <ul class="navbar-nav">
@@ -38,10 +44,42 @@
         <button id="toggler-button" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
-            <i class="fa fa-bars"></i>
-            <i class="fa fa-close"></i>
+            <i id="menu-icon" class="fa fa-solid fa-bars fa-2x"></i>
+            <i id="xbar-icon" class="fa fa-solid fa-close fa-2x"></i>
         </button>
     </nav>
+
+    <section class="home-screen">
+        <div class="welcome-container">
+            <div class="welcome-content">
+                <div class="welcome-message">
+                    <p class="greet-message">
+                        <span id="greet-message" class="greet-greet color-text">Hello</span>
+                        , I'm <span class="greet-name"></span>Premnath</span>
+                    </p>
+                    <p class="greet-message greet-info">
+                        A Front End Web Developer
+                    </p>
+                    </span>
+                    <p class="greet-message  greet-info-info">
+                        I'm a Indian 🇮🇳 web developer who loves building digital products.
+                    </p>
+                </div>
+                <div class="img-box">
+                    <img src="assets/my-pic.png" alt="my-logo" />
+                </div>
+            </div>
+            <div class="social-icons">
+                <i class="fa fa-regular fa-envelope fa-2x"></i>
+                <i class="fa fa-brands fa-linkedin fa-2x"></i>
+                <i class="fa fa-brands fa-github fa-2x"></i>
+                <i class="fa fa-brands fa-instagram fa-2x"></i>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fa fa-solid fa-mouse fa-2x"></i>
+        </div>
+    </section>
 
     <script src="index.js"></script>
 </body>

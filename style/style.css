@@ -1,3 +1,6 @@
+*:not(.fa) {
+  font-family: 'Nunito Sans', sans-serif !important; }
+
 body {
   transition: 0.2s ease-in-out all;
   height: 100vh;
@@ -7,13 +10,10 @@ body {
     background: #14123d;
     color: #ffffff;
     align-items: center;
-    padding: 0.6rem 1rem; }
+    padding: 0.6rem 3rem; }
     body .navbar .navbar-toggler {
       display: none;
       margin-left: auto; }
-    body .navbar .brand-logo {
-      width: 2rem;
-      height: 2rem; }
     body .navbar .navbar-contents {
       margin-left: auto;
       display: flex; }
@@ -22,47 +22,141 @@ body {
         body .navbar .navbar-contents .navbar-nav .nav-item {
           padding: 0 1rem; }
         body .navbar .navbar-contents .navbar-nav .active a {
-          color: #fd5f20; }
+          color: #f86c35; }
     body .navbar a {
       text-decoration: none;
       color: #ffffff;
       font-weight: 600;
       font-size: 1.1rem; }
+    body .navbar #toggler-button {
+      background: none;
+      box-shadow: none;
+      border: none; }
+      body .navbar #toggler-button .fa {
+        color: #ffffff; }
+      body .navbar #toggler-button #xbar-icon {
+        display: none; }
   body .show {
     height: 100% !important;
     visibility: visible !important;
     transition: all 0.5s linear; }
-
-@media only screen and (max-width: 560px) {
-  body .navbar .navbar-contents .navbar-nav {
-    position: absolute;
-    top: 3.9rem;
-    left: 0;
-    flex-direction: column;
-    background: #41089c44;
-    color: #000000;
-    width: 100%;
-    height: 0;
-    align-items: center;
-    visibility: hidden;
-    transition: all 0.5s linear; }
-    body .navbar .navbar-contents .navbar-nav .nav-item {
-      padding: 1.5rem 0;
+  body section {
+    min-height: 100vh;
+    font-weight: 600; }
+  body .home-screen {
+    background: #040011;
+    color: #ffffff;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: center; }
+    body .home-screen .welcome-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      text-align: center;
-      background-position: center;
-      transition: background 0.8s; }
-      body .navbar .navbar-contents .navbar-nav .nav-item:hover {
-        background: #41089c44 radial-gradient(circle, transparent 1%, #41089c44 1%) center/15000%; }
-      body .navbar .navbar-contents .navbar-nav .nav-item:active {
-        background-color: rgba(65, 8, 156, 0.4);
-        background-size: 100%;
-        transition: background 0s; }
-        body .navbar .navbar-contents .navbar-nav .nav-item:active a {
-          color: #ffffff; }
-    body .navbar .navbar-contents .navbar-nav .active a {
-      color: #fd5f20; }
-    body .navbar .navbar-contents .navbar-nav a {
-      color: #000000; }
-  body .navbar .navbar-toggler {
-    display: block; } }
+      flex-direction: column; }
+      body .home-screen .welcome-container .welcome-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 2; }
+        body .home-screen .welcome-container .welcome-content .welcome-message {
+          width: 75%;
+          font-size: 2rem;
+          line-height: 3.5rem;
+          text-align: left; }
+          body .home-screen .welcome-container .welcome-content .welcome-message .greet-info {
+            font-size: 1.5rem; }
+          body .home-screen .welcome-container .welcome-content .welcome-message .color-text {
+            color: #f86c35;
+            transition: opacity .5s ease; }
+        body .home-screen .welcome-container .welcome-content .img-box img {
+          filter: grayscale(100%);
+          width: 100%; }
+      body .home-screen .welcome-container .social-icons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex: 1; }
+        body .home-screen .welcome-container .social-icons .fa {
+          padding: 1rem;
+          cursor: pointer; }
+          body .home-screen .welcome-container .social-icons .fa:hover {
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important; }
+        body .home-screen .welcome-container .social-icons .fa-instagram:hover {
+          background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); }
+        body .home-screen .welcome-container .social-icons .fa-envelope:hover {
+          background: #f24a48; }
+        body .home-screen .welcome-container .social-icons .fa-linkedin:hover {
+          background: #0077b5; }
+        body .home-screen .welcome-container .social-icons .fa-github:hover {
+          background: rgba(255, 255, 255, 0.7); }
+    body .home-screen .scroll-indicator {
+      position: fixed;
+      bottom: 2rem; }
+      body .home-screen .scroll-indicator .fa {
+        color: rgba(255, 255, 255, 0.2); }
+  body .fade {
+    opacity: 0; }
+
+@media only screen and (max-width: 600px) {
+  body .navbar {
+    padding: 0.6rem 1rem; }
+    body .navbar .navbar-contents .navbar-nav {
+      position: absolute;
+      top: 3.9rem;
+      left: 0;
+      flex-direction: column;
+      background: #1f1c5cea;
+      z-index: 1000;
+      color: #040011;
+      width: 100%;
+      height: 0;
+      align-items: center;
+      visibility: hidden;
+      transition: all 0.5s linear; }
+      body .navbar .navbar-contents .navbar-nav .nav-item {
+        padding: 1.5rem 0;
+        width: 100%;
+        text-align: center;
+        background-position: center;
+        transition: background 0.8s; }
+        body .navbar .navbar-contents .navbar-nav .nav-item:hover {
+          background: #14123d radial-gradient(circle, transparent 1%, #14123d 1%) center/15000%; }
+        body .navbar .navbar-contents .navbar-nav .nav-item:active {
+          background-color: rgba(20, 18, 61, 0.4);
+          background-size: 100%;
+          transition: background 0s; }
+          body .navbar .navbar-contents .navbar-nav .nav-item:active a {
+            color: #ffffff; }
+      body .navbar .navbar-contents .navbar-nav .active a {
+        color: #f86c35; }
+      body .navbar .navbar-contents .navbar-nav a {
+        color: #ffffff; }
+    body .navbar .navbar-toggler {
+      display: block; } }
+
+@media only screen and (max-width: 900px) {
+  body .home-screen {
+    padding: 1rem 0; }
+    body .home-screen .welcome-container .welcome-content {
+      flex-direction: column; }
+      body .home-screen .welcome-container .welcome-content .img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 0; }
+        body .home-screen .welcome-container .welcome-content .img-box img {
+          width: 50%; }
+      body .home-screen .welcome-container .welcome-content .welcome-message {
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+        order: 1;
+        line-height: 2.5rem;
+        font-size: 1.6rem; }
+        body .home-screen .welcome-container .welcome-content .welcome-message .greet-info {
+          font-size: 1.2rem; }
+        body .home-screen .welcome-container .welcome-content .welcome-message .greet-info-info {
+          font-size: 1rem; } }
