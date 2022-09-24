@@ -4,7 +4,8 @@
   "description": "My Website",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass style/style.scss style/style.css --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/premnathkulal/premnathkulal.github.io/issues"
   },
-  "homepage": "https://github.com/premnathkulal/premnathkulal.github.io#readme"
+  "homepage": "https://github.com/premnathkulal/premnathkulal.github.io#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
 }
