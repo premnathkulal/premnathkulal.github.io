@@ -1,4 +1,5 @@
-function initializeApp() {
+const setWelcomeMessage = () => {
+  let count = 0;
   const welcomeText = [
     "Hello 👋",
     "नमस्ते 🙏",
@@ -9,7 +10,6 @@ function initializeApp() {
     "你好",
   ];
   const welcomeTextDocument = document.getElementById("greet-message");
-  let count = 0;
 
   setInterval(() => {
     welcomeTextDocument.classList.add("fade");
@@ -23,22 +23,48 @@ function initializeApp() {
 
     count += 1;
   }, 5000);
-}
+};
 
-const menuToggler = document.getElementById("toggler-button");
-menuToggler.addEventListener("click", () => {
-  const isMenuOpen = document
-    .getElementsByClassName("navbar-nav")[0]
-    .classList.contains("show");
-  if (!isMenuOpen) {
-    document.getElementsByClassName("navbar-nav")[0].classList.add("show");
-    document.getElementById("menu-icon").style.display = "none";
-    document.getElementById("xbar-icon").style.display = "block";
-  } else {
-    document.getElementById("menu-icon").style.display = "block";
-    document.getElementById("xbar-icon").style.display = "none";
-    document.getElementsByClassName("navbar-nav")[0].classList.remove("show");
-  }
-});
+const navBarHandler = () => {
+  const menuToggler = document.getElementById("toggler-button");
+  document.getElementById("times-icon").style.display = "none";
+  menuToggler.addEventListener("click", () => {
+    const isMenuOpen = document
+      .getElementsByClassName("navbar-nav")[0]
+      .classList.contains("show");
+    if (!isMenuOpen) {
+      document.getElementsByClassName("navbar-nav")[0].classList.add("show");
+      document.getElementById("menu-icon").style.display = "none";
+      document.getElementById("times-icon").style.display = "block";
+    } else {
+      document.getElementById("menu-icon").style.display = "block";
+      document.getElementById("times-icon").style.display = "none";
+      document.getElementsByClassName("navbar-nav")[0].classList.remove("show");
+    }
+  });
+};
+
+const handlePageScroll = () => {
+  document.addEventListener("scroll", (e) => {
+    const scrollIndicator = document.getElementById("scroll-indicator");
+    const totalPageHeight = document.body.scrollHeight;
+    const scrollPoint = window.scrollY + window.innerHeight;
+    if (Math.ceil(scrollPoint) >= totalPageHeight) {
+      // At the bottom of page
+    }
+    if (window.scrollY > 100) {
+      scrollIndicator.style.display = "none";
+    }
+    if (window.scrollY === 0) {
+      scrollIndicator.style.display = "block";
+    }
+  });
+};
+
+const initializeApp = () => {
+  navBarHandler();
+  setWelcomeMessage();
+  handlePageScroll();
+};
 
 initializeApp();
