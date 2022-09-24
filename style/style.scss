@@ -8,6 +8,11 @@ $black: #040011;
 
 *:not(.fa) {
     font-family: 'Nunito Sans', sans-serif !important;
+    &:focus-visible {
+        outline: 2px solid red;
+        border-radius: 2px;
+        outline-offset: 2px;
+    }
 }
 
 body {
@@ -79,7 +84,7 @@ body {
 
     section {
         padding: 2.5rem 0.5rem !important;
-        height: 100vh;
+        height: calc(100% - 144px);
         font-weight: 600;
     }
 
@@ -91,6 +96,7 @@ body {
         justify-content: center;
 
         .welcome-container {
+            max-width: 85rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -167,6 +173,11 @@ body {
                     }
                 }
 
+                a {
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+
             }
 
         }
@@ -174,6 +185,7 @@ body {
         .scroll-indicator {
             position: fixed;
             bottom: 2rem;
+            cursor: pointer;
 
             .fa {
                 color: rgba($white, 0.2);
