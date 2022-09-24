@@ -49,7 +49,7 @@ body {
     transition: all 0.5s linear; }
   body section {
     padding: 2.5rem 0.5rem !important;
-    height: calc(100% - 144px);
+    height: 100vh;
     font-weight: 600; }
   body .home-screen {
     background: #040011;
@@ -112,6 +112,12 @@ body {
         color: rgba(255, 255, 255, 0.2); }
   body .fade {
     opacity: 0; }
+  body footer {
+    background: #14123d;
+    color: #aca6a6;
+    font-weight: 600;
+    text-align: center;
+    padding: 1.5rem; }
 
 @media only screen and (max-width: 600px) {
   body .navbar {

@@ -1,6 +1,6 @@
 function initializeApp() {
   const welcomeText = [
-    "Hello",
+    "Hello 👋",
     "नमस्ते 🙏",
     "ನಮಸ್ಕಾರ 🙏",
     "ഹലോ 🙏",
