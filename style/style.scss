@@ -1,5 +1,5 @@
 $primary-blue: #14123d;
-// $primary-green: #14aaaa;
+$primary-green: #14aaaa;
 $secondary-blue: #1f1c5cea;
 $primary-saffron: #f86c35;
 $secondary-saffron: #f7c892;
@@ -7,8 +7,10 @@ $white: #ffffff;
 $black: #040011;
 
 *:not(.fa) {
-    font-family: 'Nunito Sans', sans-serif !important;
+    font-family: "Nunito Sans", sans-serif !important;
     scroll-behavior: smooth;
+    font-weight: 600;
+
     &:focus-visible {
         outline: 2px solid red;
         border-radius: 2px;
@@ -16,11 +18,23 @@ $black: #040011;
     }
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary-blue;
+}
+
 body {
     transition: 0.2s ease-in-out all;
     min-height: 100vh;
     width: 100%;
     scroll-behavior: smooth;
+
+    .medium-text {
+        font-size: 1.5rem;
+    }
 
     .navbar {
         top: 0;
@@ -122,9 +136,13 @@ body {
                         font-size: 1.5rem;
                     }
 
+                    .greet-info-info {
+                        line-height: 2.25rem;
+                    }
+
                     .color-text {
                         color: $primary-saffron;
-                        transition: opacity .5s ease;
+                        transition: opacity 0.5s ease;
                     }
                 }
 
@@ -154,13 +172,38 @@ body {
 
                 .fa-instagram {
                     &:hover {
-                        background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+                        background: radial-gradient(circle farthest-corner at 35% 90%,
+                                #fec564,
+                                transparent 50%),
+                            radial-gradient(circle farthest-corner at 0 140%,
+                                #fec564,
+                                transparent 50%),
+                            radial-gradient(ellipse farthest-corner at 0 -25%,
+                                #5258cf,
+                                transparent 50%),
+                            radial-gradient(ellipse farthest-corner at 20% -50%,
+                                #5258cf,
+                                transparent 50%),
+                            radial-gradient(ellipse farthest-corner at 100% 0,
+                                #893dc2,
+                                transparent 50%),
+                            radial-gradient(ellipse farthest-corner at 60% -20%,
+                                #893dc2,
+                                transparent 50%),
+                            radial-gradient(ellipse farthest-corner at 100% 100%,
+                                #d9317a,
+                                transparent),
+                            linear-gradient(#6559ca,
+                                #bc318f 30%,
+                                #e33f5f 50%,
+                                #f77638 70%,
+                                #fec66d 100%);
                     }
                 }
 
                 .fa-envelope {
                     &:hover {
-                        background: #f24a48
+                        background: #f24a48;
                     }
                 }
 
@@ -172,17 +215,15 @@ body {
 
                 .fa-github {
                     &:hover {
-                        background: rgba($white, 0.7)
+                        background: rgba($white, 0.7);
                     }
                 }
 
                 a {
-                    color: #FFFFFF;
+                    color: #ffffff;
                     text-decoration: none;
                 }
-
             }
-
         }
 
         .scroll-indicator {
@@ -196,10 +237,90 @@ body {
         }
     }
 
-    .about-screen, .my-work-screen{
+    .about-section {
         display: flex;
         align-items: center;
         justify-content: center;
+        line-height: 2rem;
+
+        .about-screen {
+            color: $primary-blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-direction: column;
+            max-width: 85rem;
+
+            .header {
+                padding-bottom: 1rem;
+            }
+
+            .about-me {
+                font-size: 1.5rem;
+            }
+        }
+
+        .about-me-more {
+            padding-top: 1rem;
+            display: flex;
+            width: 100%;
+            // align-items: center;
+            justify-content: flex-start;
+            font-size: 1.25rem;
+
+            .flex-item {
+                flex: 1;
+
+                .sub-header {
+                    padding-bottom: 0.8rem;
+                    text-decoration: underline;
+                }
+
+                .btn {
+                    background-color: $primary-blue;
+                    border: none;
+                    box-shadow: none;
+                    outline: none;
+                    color: $white;
+                    padding: 1rem 2rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        border: 2px solid $primary-blue;
+                        color: $primary-blue;
+                        background: none;
+                    }
+                }
+            }
+
+            li {
+                list-style: none;
+
+                &:hover {
+                    .fa-js {
+                        color: #e8d44d;
+                    }
+
+                    .fa-sass {
+                        color: #c66394;
+                    }
+
+                    .fa-react {
+                        color: #5ed4f3d9;
+                    }
+
+                    .fa-angular {
+                        color: #db2f35;
+                    }
+
+                    .fa-vuejs {
+                        color: #40b27f;
+                    }
+                }
+            }
+        }
     }
 
     .fade {
@@ -234,7 +355,6 @@ body {
                     align-items: center;
                     visibility: hidden;
                     transition: all 0.5s linear;
-
 
                     .nav-item {
                         padding: 1.5rem 0;
@@ -272,6 +392,14 @@ body {
 
             .navbar-toggler {
                 display: block;
+            }
+        }
+
+        .about-me-more {
+            flex-direction: column;
+
+            .sub-header {
+                margin-top: 1rem;
             }
         }
     }
