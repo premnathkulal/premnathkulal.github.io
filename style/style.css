@@ -39,6 +39,8 @@ body {
         display: flex; }
         body .navbar .navbar-contents .navbar-nav .nav-item {
           padding: 0 1rem; }
+          body .navbar .navbar-contents .navbar-nav .nav-item:hover {
+            opacity: 0.6; }
         body .navbar .navbar-contents .navbar-nav .active a {
           color: #f86c35; }
     body .navbar a {
@@ -137,20 +139,27 @@ body {
       flex-direction: column;
       max-width: 85rem; }
       body .about-section .about-screen .header {
-        padding-bottom: 1rem; }
+        padding-bottom: 3rem; }
       body .about-section .about-screen .about-me {
-        font-size: 1.5rem; }
+        font-size: 1.5rem;
+        padding-bottom: 1rem; }
+    body .about-section .sub-header {
+      padding-bottom: 0.8rem;
+      text-decoration: underline; }
+    body .about-section .about-hobby {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      body .about-section .about-hobby .small-img {
+        width: 1.2rem; }
     body .about-section .about-me-more {
-      padding-top: 1rem;
+      padding: 2rem 0;
       display: flex;
       width: 100%;
       justify-content: flex-start;
       font-size: 1.25rem; }
       body .about-section .about-me-more .flex-item {
         flex: 1; }
-        body .about-section .about-me-more .flex-item .sub-header {
-          padding-bottom: 0.8rem;
-          text-decoration: underline; }
         body .about-section .about-me-more .flex-item .btn {
           background-color: #14123d;
           border: none;

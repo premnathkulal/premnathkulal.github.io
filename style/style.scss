@@ -60,6 +60,10 @@ body {
 
                 .nav-item {
                     padding: 0 1rem;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
                 }
 
                 .active {
@@ -253,29 +257,44 @@ body {
             max-width: 85rem;
 
             .header {
-                padding-bottom: 1rem;
+                padding-bottom: 3rem;
             }
 
             .about-me {
                 font-size: 1.5rem;
+                padding-bottom: 1rem;
+            }
+        }
+
+        .sub-header {
+            padding-bottom: 0.8rem;
+            text-decoration: underline;
+        }
+
+        .about-hobby {
+            // border: 2px solid $primary-blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .small-img {
+                width: 1.2rem;
             }
         }
 
         .about-me-more {
-            padding-top: 1rem;
+            padding: 2rem 0;
             display: flex;
             width: 100%;
             // align-items: center;
             justify-content: flex-start;
             font-size: 1.25rem;
 
+            
+
             .flex-item {
                 flex: 1;
 
-                .sub-header {
-                    padding-bottom: 0.8rem;
-                    text-decoration: underline;
-                }
 
                 .btn {
                     background-color: $primary-blue;
@@ -286,7 +305,7 @@ body {
                     padding: 1rem 2rem;
                     border-radius: 4px;
                     cursor: pointer;
-                    
+
                     &:hover {
                         border: 2px solid $primary-blue;
                         color: $primary-blue;
