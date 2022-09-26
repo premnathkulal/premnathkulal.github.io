@@ -16,8 +16,7 @@
 body {
   transition: 0.2s ease-in-out all;
   min-height: 100vh;
-  width: 100%;
-  scroll-behavior: smooth; }
+  width: 100%; }
   body .medium-text {
     font-size: 1.5rem; }
   body .navbar {
@@ -56,14 +55,11 @@ body {
         color: #ffffff; }
       body .navbar #toggler-button #xbar-icon {
         display: none; }
-  body .show {
-    height: 100vh !important;
-    visibility: visible !important;
-    transition: all 0.5s linear; }
   body section {
-    padding: 2.5rem 0.5rem !important;
+    padding: 2.5rem 1rem !important;
     min-height: 100vh;
-    font-weight: 600; }
+    font-weight: 600;
+    scroll-snap-align: start; }
   body .home-screen {
     background: #040011;
     color: #ffffff;
@@ -147,16 +143,27 @@ body {
       padding-bottom: 0.8rem;
       text-decoration: underline; }
     body .about-section .about-hobby {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
+      width: 100%;
+      display: flex; }
       body .about-section .about-hobby .small-img {
-        width: 1.2rem; }
+        width: 1.65rem; }
       body .about-section .about-hobby .yaksha {
         margin-bottom: -0.2rem; }
       body .about-section .about-hobby .emoji {
         font-size: 1rem;
         opacity: 0.6; }
+      body .about-section .about-hobby .text-link {
+        text-decoration: none;
+        font-style: italic;
+        color: unset;
+        opacity: 0.8;
+        background: linear-gradient(to right, #14123d 49.3%, white 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out; }
+        body .about-section .about-hobby .text-link:hover {
+          background-position: left bottom;
+          color: #ffffff; }
     body .about-section .about-me-more {
       padding: 2rem 0;
       display: flex;
@@ -165,13 +172,16 @@ body {
       font-size: 1.25rem; }
       body .about-section .about-me-more .flex-item {
         flex: 1; }
+        body .about-section .about-me-more .flex-item .resule-info {
+          padding-bottom: 0.5rem; }
         body .about-section .about-me-more .flex-item .btn {
+          text-decoration: none;
           background-color: #14123d;
           border: none;
           box-shadow: none;
           outline: none;
           color: #ffffff;
-          padding: 1rem 2rem;
+          padding: 0.5rem 1rem;
           border-radius: 4px;
           cursor: pointer; }
           body .about-section .about-me-more .flex-item .btn:hover {
@@ -200,6 +210,10 @@ body {
     padding: 1.5rem; }
 
 @media only screen and (max-width: 600px) {
+  body .show {
+    height: 100vh !important;
+    visibility: visible !important;
+    transition: all 0.5s linear; }
   body .navbar {
     padding: 0.6rem 1rem; }
     body .navbar .navbar-contents .navbar-nav {
@@ -235,10 +249,16 @@ body {
         color: #ffffff; }
     body .navbar .navbar-toggler {
       display: block; }
-  body .about-me-more {
-    flex-direction: column; }
-    body .about-me-more .sub-header {
-      margin-top: 1rem; } }
+  body .about-section .about-screen .header,
+  body .about-section .about-screen .about-me {
+    padding-bottom: 1rem; }
+  body .about-section .about-me-more {
+    flex-direction: column;
+    padding: 0.5rem 0; }
+    body .about-section .about-me-more .sub-header {
+      padding: 1rem 0; }
+    body .about-section .about-me-more .resume-container {
+      padding-bottom: 1rem; } }
 
 @media only screen and (max-width: 900px) {
   body .home-screen {

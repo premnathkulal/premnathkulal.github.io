@@ -23,12 +23,12 @@
             <img src="assets/my-logo.svg" alt="my-logo" width="35rem" />
         </a>
         <div class="navbar-contents" id="navbarSupportedContent">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" id="nav-item">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about-section">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Education</a>
@@ -39,9 +39,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Connect</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">Gallery</a>
-                </li> -->
             </ul>
         </div>
         <button id="toggler-button" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -52,95 +49,116 @@
         </button>
     </nav>
 
-    <section class="home-screen">
-        <div class="welcome-container">
-            <div class="welcome-content">
-                <div class="welcome-message">
-                    <p class="greet-message">
-                        <span id="greet-message" class="greet-greet color-text">Hello 👋</span>
-                        , I'm <span class="greet-name"></span>Premnath</span>
-                    </p>
-                    <p class="greet-message greet-info">
-                        A Front End Web Developer
-                    </p>
-                    </span>
-                    <p class="greet-message  greet-info-info">
-                        I'm a Indian 🇮🇳 web developer who loves building digital products.
-                    </p>
+    <div class="container">
+        <section id="home" class="home-screen">
+            <div class="welcome-container">
+                <div class="welcome-content">
+                    <div class="welcome-message">
+                        <p class="greet-message">
+                            <span id="greet-message" class="greet-greet color-text">Hello 👋</span>
+                            , I'm <span class="greet-name"></span>Premnath</span>
+                        </p>
+                        <p class="greet-message greet-info">
+                            A Front End Web Developer
+                        </p>
+                        </span>
+                        <p class="greet-message  greet-info-info">
+                            I'm a Indian 🇮🇳 web developer who loves building digital products.
+                        </p>
+                    </div>
+                    <div class="img-box">
+                        <img src="assets/my-pic.png" alt="my-logo" />
+                    </div>
                 </div>
-                <div class="img-box">
-                    <img src="assets/my-pic.png" alt="my-logo" />
+                <div class="social-icons">
+                    <a href="mailto: premnathkulal1998@gmail.com">
+                        <i class="fa fa-regular fa-envelope fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/premnath-kulal-06329a169/" target="_blank"
+                        class="social-links">
+                        <i class="fa fa-brands fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/premnathkulal" target="_blank" class="social-links">
+                        <i class="fa fa-brands fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_prem_kulal/" target="_blank" class="social-links">
+                        <i class="fa fa-brands fa-instagram fa-2x"></i>
+                    </a>
                 </div>
             </div>
-            <div class="social-icons">
-                <a href = "mailto: premnathkulal1998@gmail.com">
-                    <i class="fa fa-regular fa-envelope fa-2x"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/premnath-kulal-06329a169/" target="_blank" class="social-links">
-                    <i class="fa fa-brands fa-linkedin fa-2x"></i>
-                </a>
-                <a href="https://github.com/premnathkulal" target="_blank" class="social-links">
-                    <i class="fa fa-brands fa-github fa-2x"></i>
-                </a>
-                <a href="https://www.instagram.com/_prem_kulal/" target="_blank" class="social-links">
-                    <i class="fa fa-brands fa-instagram fa-2x"></i>
+            <div id="scroll-indicator" class="scroll-indicator">
+                <a href="#about-section">
+                    <i class="fa fa-solid fa-mouse fa-2x"></i>
                 </a>
             </div>
-        </div>
-        <div id="scroll-indicator" class="scroll-indicator">
-            <a href="#next-section">
-                <i class="fa fa-solid fa-mouse fa-2x"></i>
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <section id="next-section" class="about-section">
-        <div class="about-screen">
-            <p class="header sub-header ">
-                About me
-            </p>
-            <p class="about-me">
-                I am a Frontend Engineer with 2+ years of experience in developing, testing, and integrating high-quality 
-    web apps. I'm proficient in delivering quality systems coupled with intuitive and accessible interfaces across multiple industries.
-            </p>
-            <div class="about-me-more">
-                <div class="flex-item">
-                    <p class="medium-text sub-header">
-                        Technologies I've used
-                    </p>
-                    <ul>
-                        <li><i class="fa fa-brands fa-js"></i> JavaScript/TypeScript (ES6)</li>
-                        <li><i class="fa fa-brands fa-sass"></i> SASS/SCSS</li>
-                        <li><i class="fa fa-brands fa-react"></i> React</li>
-                        <li><i class="fa fa-brands fa-angular"></i> Angular</li>
-                        <li><i class="fa fa-brands fa-vuejs"></i> Vue</li>
-                    </ul>
-                </div>
-                <div class="flex-item">
-                    <p class="medium-text sub-header">
-                        Download My Resume
-                    </p>
-                    <p class="resule-info">To know more about my professional experience please download my CV</p>
-                    <button class="btn">
-                        DOWNLOAD CV
-                    </button>
-                </div>
-            </div>
-            <div class="about-me about-hobby">
-                <p>
-                    I am also interested in Yakshagana <img src="assets/yakshagana.svg" alt="yakshagana" class="small-img yaksha"/>, Clay Modeling <img src="assets/clay-modal.svg" alt="clay" class="small-img"/>, Music <span class="emoji">🎶</span>, Flute <img src="assets/flute.svg" alt="flute" class="small-img"/>
+        <section id="about-section" class="about-section">
+            <div class="about-screen">
+                <p class="header sub-header">
+                    About me
                 </p>
+                <p class="about-me">
+                    I am a Frontend Engineer with 2+ years of experience in developing, testing, and integrating
+                    high-quality
+                    web apps. I'm proficient in delivering quality systems coupled with intuitive and accessible
+                    interfaces
+                    across multiple industries.
+                </p>
+                <div class="about-me-more">
+                    <div class="flex-item">
+                        <p class="medium-text sub-header">
+                            Technologies I've used
+                        </p>
+                        <ul>
+                            <li><i class="fa fa-brands fa-js"></i> JavaScript/TypeScript (ES6)</li>
+                            <li><i class="fa fa-brands fa-sass"></i> SASS/SCSS</li>
+                            <li><i class="fa fa-brands fa-react"></i> React</li>
+                            <li><i class="fa fa-brands fa-angular"></i> Angular</li>
+                            <li><i class="fa fa-brands fa-vuejs"></i> Vue</li>
+                        </ul>
+                    </div>
+                    <div class="flex-item resume-container">
+                        <p class="medium-text sub-header">
+                            Download My Resume
+                        </p>
+                        <p class="resule-info">To know more about my professional experience please download my CV</p>
+                        <a href="assets/RT02494_Premnath _CV.pdf" download="premnath_cv" class="btn">DOWNLOAD CV</a>
+                    </div>
+                </div>
+                <div class="about-me about-hobby">
+                    <p>
+                        I am also interested in
+                        <a href="https://en.wikipedia.org/wiki/Yakshagana" class="text-link"
+                            target="_blank"><i>Yakshagana</i>
+                            <img src="assets/yakshagana.svg" alt="yakshagana" class="small-img yaksha" />,
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/Venu" target="_blank" class="text-link"> Carnatic
+                            Flute
+                            <img src="assets/flute.svg" alt="flute" class="small-img" />,
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/Carnatic_music" class="text-link"
+                            target="_blank">Carnatic Music
+                            <img src="assets/music.svg" class="small-img" alt="carnatic" />,
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/Modelling_clay" class="text-link" target="_blank"> Clay
+                            Modeling
+                            <img src="assets/clay-modal.svg" alt="clay" class="small-img" />
+                        </a>
+
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- <section class="my-work-screen">
-        My Work
-    </section> -->
+        <!-- <section class="my-work-screen">
+            My Work
+        </section> -->
 
-    <footer>
-        <p>Designed and developed by Premnath</p>
-    </footer>
+        <footer>
+            <p>Designed and developed by Premnath</p>
+        </footer>
+    </div>
 
     <script src="index.js"></script>
 </body>

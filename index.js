@@ -25,40 +25,74 @@ const setWelcomeMessage = () => {
   }, 5000);
 };
 
+const toggleNavOptions = () => {
+  const isMenuOpen = document
+    .getElementsByClassName("navbar-nav")[0]
+    .classList.contains("show");
+  if (!isMenuOpen) {
+    document.getElementsByClassName("navbar-nav")[0].classList.add("show");
+    document.getElementById("menu-icon").style.display = "none";
+    document.getElementById("times-icon").style.display = "block";
+  } else {
+    document.getElementById("menu-icon").style.display = "block";
+    document.getElementById("times-icon").style.display = "none";
+    document.getElementsByClassName("navbar-nav")[0].classList.remove("show");
+  }
+};
+
 const navBarHandler = () => {
   const menuToggler = document.getElementById("toggler-button");
   document.getElementById("times-icon").style.display = "none";
   menuToggler.addEventListener("click", () => {
-    const isMenuOpen = document
-      .getElementsByClassName("navbar-nav")[0]
-      .classList.contains("show");
-    if (!isMenuOpen) {
-      document.getElementsByClassName("navbar-nav")[0].classList.add("show");
-      document.getElementById("menu-icon").style.display = "none";
-      document.getElementById("times-icon").style.display = "block";
-    } else {
-      document.getElementById("menu-icon").style.display = "block";
-      document.getElementById("times-icon").style.display = "none";
-      document.getElementsByClassName("navbar-nav")[0].classList.remove("show");
+    toggleNavOptions();
+  });
+
+  const navItem = document.getElementById("nav-item");
+  navItem.addEventListener("click", (e) => {
+    document.getElementsByClassName("active")[0].classList.remove("active");
+    e.target.parentNode.classList.add("active");
+    toggleNavOptions();
+  });
+};
+
+const onScrollNavLinkHandler = () => {
+  let section = document.querySelectorAll("section");
+  let lists = document.querySelectorAll(".nav-item");
+
+  const activeLink = (li) => {
+    lists.forEach((item) => item.classList.remove("active"));
+    li.classList.add("active");
+  };
+
+  lists.forEach((item) =>
+    item.addEventListener("click", function () {
+      activeLink(this);
+    })
+  );
+
+  section.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if (top >= offset && top < offset + height) {
+      const target = document.querySelector(`[href='#${id}']`).parentElement;
+      activeLink(target);
     }
   });
 };
 
 const handlePageScroll = () => {
-  document.addEventListener("scroll", (e) => {
-    const scrollIndicator = document.getElementById("scroll-indicator");
-    const totalPageHeight = document.body.scrollHeight;
-    const scrollPoint = window.scrollY + window.innerHeight;
-    if (Math.ceil(scrollPoint) >= totalPageHeight) {
-      // At the bottom of page
-    }
-    if (window.scrollY > 100) {
+  document.addEventListener(
+    "scroll",
+    () => {
+      const scrollIndicator = document.getElementById("scroll-indicator");
       scrollIndicator.style.display = "none";
-    }
-    if (window.scrollY === 0) {
-      scrollIndicator.style.display = "block";
-    }
-  });
+      onScrollNavLinkHandler();
+    },
+    true
+  );
 };
 
 const initializeApp = () => {
