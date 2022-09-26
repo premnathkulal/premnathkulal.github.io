@@ -62,7 +62,7 @@ body {
     transition: all 0.5s linear; }
   body section {
     padding: 2.5rem 0.5rem !important;
-    height: 100vh;
+    min-height: 100vh;
     font-weight: 600; }
   body .home-screen {
     background: #040011;
@@ -152,6 +152,11 @@ body {
       justify-content: center; }
       body .about-section .about-hobby .small-img {
         width: 1.2rem; }
+      body .about-section .about-hobby .yaksha {
+        margin-bottom: -0.2rem; }
+      body .about-section .about-hobby .emoji {
+        font-size: 1rem;
+        opacity: 0.6; }
     body .about-section .about-me-more {
       padding: 2rem 0;
       display: flex;
