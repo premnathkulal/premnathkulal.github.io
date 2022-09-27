@@ -19,12 +19,15 @@ body {
   width: 100%; }
   body .medium-text {
     font-size: 1.5rem; }
-  body .navbar {
+  body nav {
+    position: fixed;
+    left: 0;
     top: 0;
-    position: sticky;
+    width: 100%;
+    z-index: 1000; }
+  body .navbar {
     display: flex;
     color: #ffffff;
-    z-index: 1000;
     align-items: center;
     padding: 0.6rem 3rem;
     background: #14123d; }
@@ -200,15 +203,17 @@ body {
           color: #db2f35; }
         body .about-section .about-me-more li:hover .fa-vuejs {
           color: #40b27f; }
-  body .education-section, body .my-work-section, body .contact-section, body .more-section {
-    background: #14123d;
+  body .my-work-section,
+  body .contact-section {
+    background: #040011;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color: #ffffff;
     font-size: 1.5rem; }
-  body .my-work-section, body .more-section {
+  body .more-section,
+  body .contact-section {
     background: #ffffff;
     color: #14123d; }
   body .fade {
@@ -241,7 +246,10 @@ body {
       visibility: hidden;
       transition: all 0.5s linear; }
       body .navbar .navbar-contents .navbar-nav .nav-item {
-        padding: 1.5rem 0;
+        height: 3.5rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
         width: 100%;
         text-align: center;
         background-position: center;
@@ -257,7 +265,12 @@ body {
       body .navbar .navbar-contents .navbar-nav .active a {
         color: #f86c35; }
       body .navbar .navbar-contents .navbar-nav a {
-        color: #ffffff; }
+        color: #ffffff;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
     body .navbar .navbar-toggler {
       display: block; }
   body .about-section .about-screen .header,
