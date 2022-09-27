@@ -365,10 +365,8 @@ body {
         }
     }
 
-    .education-section,
     .my-work-section,
-    .contact-section,
-    .more-section {
+    .contact-section {
         background: $black;
         display: flex;
         align-items: center;
@@ -378,8 +376,8 @@ body {
         font-size: 1.5rem;
     }
 
-    .my-work-section,
-    .more-section {
+    .more-section,
+    .contact-section {
         background: $white;
         color: $primary-blue;
     }
