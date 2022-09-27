@@ -200,6 +200,17 @@ body {
           color: #db2f35; }
         body .about-section .about-me-more li:hover .fa-vuejs {
           color: #40b27f; }
+  body .education-section, body .my-work-section, body .contact-section, body .more-section {
+    background: #14123d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 1.5rem; }
+  body .my-work-section, body .more-section {
+    background: #ffffff;
+    color: #14123d; }
   body .fade {
     opacity: 0; }
   body footer {
