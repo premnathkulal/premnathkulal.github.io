@@ -25,18 +25,26 @@ const setWelcomeMessage = () => {
   }, 5000);
 };
 
+const openDrawer = () => {
+  document.getElementsByClassName("navbar-nav")[0].classList.add("show");
+  document.getElementById("menu-icon").style.display = "none";
+  document.getElementById("times-icon").style.display = "block";
+};
+
+const closeDrawer = () => {
+  document.getElementById("menu-icon").style.display = "block";
+  document.getElementById("times-icon").style.display = "none";
+  document.getElementsByClassName("navbar-nav")[0].classList.remove("show");
+};
+
 const toggleNavOptions = () => {
   const isMenuOpen = document
     .getElementsByClassName("navbar-nav")[0]
     .classList.contains("show");
   if (!isMenuOpen) {
-    document.getElementsByClassName("navbar-nav")[0].classList.add("show");
-    document.getElementById("menu-icon").style.display = "none";
-    document.getElementById("times-icon").style.display = "block";
+    openDrawer();
   } else {
-    document.getElementById("menu-icon").style.display = "block";
-    document.getElementById("times-icon").style.display = "none";
-    document.getElementsByClassName("navbar-nav")[0].classList.remove("show");
+    closeDrawer();
   }
 };
 
@@ -47,12 +55,12 @@ const navBarHandler = () => {
     toggleNavOptions();
   });
 
-  const navItem = document.getElementById("nav-item");
-  navItem.addEventListener("click", (e) => {
-    document.getElementsByClassName("active")[0].classList.remove("active");
-    e.target.parentNode.classList.add("active");
-    toggleNavOptions();
-  });
+  // const navItem = document.getElementById("nav-item");
+  // navItem.addEventListener("click", (e) => {
+  //   document.getElementsByClassName("active")[0].classList.remove("active");
+  //   e.target.parentNode.classList.add("active");
+  //   toggleNavOptions();
+  // });
 };
 
 const onScrollNavLinkHandler = () => {
@@ -64,11 +72,11 @@ const onScrollNavLinkHandler = () => {
     li.classList.add("active");
   };
 
-  lists.forEach((item) =>
-    item.addEventListener("click", function () {
-      activeLink(this);
-    })
-  );
+  // lists.forEach((item) =>
+  //   item.addEventListener("click", function () {
+  //     activeLink(this);
+  //   })
+  // );
 
   section.forEach((sec) => {
     let top = window.scrollY;
@@ -78,6 +86,7 @@ const onScrollNavLinkHandler = () => {
 
     if (top >= offset && top < offset + height) {
       const target = document.querySelector(`[href='#${id}']`).parentElement;
+      closeDrawer();
       activeLink(target);
     }
   });

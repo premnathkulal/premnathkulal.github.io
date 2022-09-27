@@ -35,12 +35,17 @@ body {
         font-size: 1.5rem;
     }
 
-    .navbar {
+    nav {
+        position: fixed;
+        left: 0;
         top: 0;
-        position: sticky;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navbar {
         display: flex;
         color: $white;
-        z-index: 1000;
         align-items: center;
         padding: 0.6rem 3rem;
         background: $primary-blue;
@@ -360,8 +365,11 @@ body {
         }
     }
 
-    .education-section, .my-work-section, .contact-section, .more-section {
-        background: $primary-blue;
+    .education-section,
+    .my-work-section,
+    .contact-section,
+    .more-section {
+        background: $black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -370,7 +378,8 @@ body {
         font-size: 1.5rem;
     }
 
-    .my-work-section, .more-section {
+    .my-work-section,
+    .more-section {
         background: $white;
         color: $primary-blue;
     }
@@ -415,7 +424,10 @@ body {
                     transition: all 0.5s linear;
 
                     .nav-item {
-                        padding: 1.5rem 0;
+                        height: 3.5rem;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
                         width: 100%;
                         text-align: center;
                         background-position: center;
@@ -444,6 +456,11 @@ body {
 
                     a {
                         color: $white;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                 }
             }
