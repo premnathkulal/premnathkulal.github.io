@@ -383,7 +383,7 @@ body {
                 }
             }
 
-            .brands-details {
+            .brands-details-container {
                 width: 100%;
             }
         }
@@ -506,7 +506,16 @@ body {
 
                 .brands-list {
                     .brand-item {
-                        padding-top: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-top: 2.5rem;
+                    }
+                }
+
+                .brands-details-container {
+                    p {
+                        padding: 2rem 1.5rem;
                     }
                 }
             }

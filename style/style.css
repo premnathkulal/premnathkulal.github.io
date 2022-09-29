@@ -256,7 +256,7 @@ body {
               box-shadow: 8px 8px 40px 1px #dbd9d9; }
         body .work-container .brands .brands-list .first-row {
           padding-top: 0; }
-      body .work-container .brands .brands-details {
+      body .work-container .brands .brands-details-container {
         width: 100%; }
   body .fade {
     opacity: 0; }
@@ -338,7 +338,12 @@ body {
     justify-content: space-around;
     flex-direction: column; }
     body .work-container .brands .brands-list .brand-item {
-      padding-top: 0; }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2.5rem; }
+    body .work-container .brands .brands-details-container p {
+      padding: 2rem 1.5rem; }
   body .header {
     padding-bottom: 1rem; }
   body .sub-header {
