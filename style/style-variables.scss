@@ -1,0 +1,60 @@
+$primary-blue: #14123d;
+$primary-green: #14aaaa;
+$primary-saffron: #f86c35;
+$primary-gray: #aca6a6;
+$secondary-blue: #1f1c5cea;
+$primary-shadow: #efefef;
+$secondary-shadow: #dbd9d9;
+$secondary-saffron: #f7c892;
+$white: #ffffff;
+$black: #040011;
+$gmail-theme: #f24a48;
+$linkedin-theme: #0077b5;
+$github-theme: rgba($white, 0.7);
+$javascript-theme: #e8d44d;
+$sass-theme: #c66394;
+$react-theme: #5ed4f3d9;
+$vue-theme: #40b27f;
+$angular-theme: #db2f35;
+$instagram-gradient: radial-gradient(circle farthest-corner at 35% 90%,
+    #fec564,
+    transparent 50%),
+radial-gradient(circle farthest-corner at 0 140%,
+    #fec564,
+    transparent 50%),
+radial-gradient(ellipse farthest-corner at 0 -25%,
+    #5258cf,
+    transparent 50%),
+radial-gradient(ellipse farthest-corner at 20% -50%,
+    #5258cf,
+    transparent 50%),
+radial-gradient(ellipse farthest-corner at 100% 0,
+    #893dc2,
+    transparent 50%),
+radial-gradient(ellipse farthest-corner at 60% -20%,
+    #893dc2,
+    transparent 50%),
+radial-gradient(ellipse farthest-corner at 100% 100%,
+    #d9317a,
+    transparent),
+linear-gradient(#6559ca,
+    #bc318f 30%,
+    #e33f5f 50%,
+    #f77638 70%,
+    #fec66d 100%);
+
+
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-align-justify-center {
+    @include flex-align-center();
+    @include flex-justify-center();
+}
