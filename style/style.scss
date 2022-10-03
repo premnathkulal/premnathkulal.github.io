@@ -384,7 +384,41 @@ body {
             }
 
             .brands-details-container {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
                 width: 100%;
+            }
+
+            .divider {
+                padding-right: 2.5rem;
+
+                .vertical,
+                .arrow {
+                    height: 12.5rem;
+                    width: 0.2rem;
+                    background: $secondary-shadow;
+                }
+
+                .arrow {
+                    height: 50px;
+                    position: relative;
+                    left: 0.969rem;
+                }
+
+                .arrow-1 {
+                    transform: rotate(-40deg);
+                    top: -0.45rem;
+                }
+
+                .arrow-2 {
+                    top: -1.3rem;
+                    transform: rotate(40deg);
+                }
+
+                .vertical-2 {
+                    position: relative;
+                    top: -1.7rem;
+                }
             }
         }
     }
@@ -404,6 +438,10 @@ body {
         font-weight: 600;
         text-align: center;
         padding: 1.5rem;
+    }
+
+    .hide-info {
+        display: none;
     }
 }
 
@@ -517,6 +555,10 @@ body {
                     p {
                         padding: 2rem 1.5rem;
                     }
+                }
+
+                .divider {
+                    display: none;
                 }
             }
         }

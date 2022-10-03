@@ -104,10 +104,27 @@ const handlePageScroll = () => {
   );
 };
 
+const toggleWorkedBrandsInfo = (id) => {
+  const brandsInfo = document.querySelectorAll(".brands-description");
+  brandsInfo.forEach((a) => a.classList.add("hide-info"));
+  document.getElementById(id).classList.remove("hide-info");
+};
+
+const manageWorkedBrandsInfo = () => {
+  const brandsIconArea = document.querySelectorAll(".brand-img");
+  brandsIconArea.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      toggleWorkedBrandsInfo(`${event.target.alt}-description`);
+    });
+  });
+  toggleWorkedBrandsInfo("pay-pay-description");
+};
+
 const initializeApp = () => {
   navBarHandler();
   setWelcomeMessage();
   handlePageScroll();
+  manageWorkedBrandsInfo();
 };
 
 initializeApp();
