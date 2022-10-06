@@ -203,11 +203,13 @@ body {
         }
     }
 
-    .about-section {
+    .about-section,
+    .contact-section {
         @include flex-align-justify-center();
         line-height: 2rem;
 
-        .about {
+        .about,
+        .contact {
             @include flex-align-justify-center();
             color: $primary-blue;
             font-size: 2rem;
@@ -289,6 +291,14 @@ body {
                         }
                     }
                 }
+            }
+        }
+
+        .contact {
+            color: $white;
+
+            &-me {
+                padding-bottom: 2rem
             }
         }
     }
@@ -518,8 +528,11 @@ body {
             }
         }
 
-        .about-section {
-            .about {
+        .about-section,
+        .contact-section {
+
+            .about,
+            .contact {
                 &-me {
                     padding-bottom: 1rem;
                 }
@@ -531,6 +544,16 @@ body {
 
                 .resume-container {
                     padding-bottom: 1rem;
+                }
+            }
+
+            .contact {
+                &-me {
+                    padding: 1rem;
+                }
+
+                .social-icons {
+                    font-size: 1rem;
                 }
             }
         }

@@ -125,13 +125,17 @@ body {
     body .social-icons a {
       color: #ffffff;
       text-decoration: none; }
-  body .about-section {
+  body .about-section,
+  body .contact-section {
     display: flex;
     align-items: center;
     display: flex;
     justify-content: center;
     line-height: 2rem; }
-    body .about-section .about {
+    body .about-section .about,
+    body .about-section .contact,
+    body .contact-section .about,
+    body .contact-section .contact {
       display: flex;
       align-items: center;
       display: flex;
@@ -140,20 +144,38 @@ body {
       font-size: 2rem;
       flex-direction: column;
       max-width: 85rem; }
-      body .about-section .about-me {
+      body .about-section .about-me,
+      body .about-section .contact-me,
+      body .contact-section .about-me,
+      body .contact-section .contact-me {
         font-size: 1.5rem;
         padding-bottom: 1rem; }
-      body .about-section .about-hobby {
+      body .about-section .about-hobby,
+      body .about-section .contact-hobby,
+      body .contact-section .about-hobby,
+      body .contact-section .contact-hobby {
         width: 100%;
         display: flex; }
-        body .about-section .about-hobby .small-img {
+        body .about-section .about-hobby .small-img,
+        body .about-section .contact-hobby .small-img,
+        body .contact-section .about-hobby .small-img,
+        body .contact-section .contact-hobby .small-img {
           width: 1.65rem; }
-        body .about-section .about-hobby .yaksha {
+        body .about-section .about-hobby .yaksha,
+        body .about-section .contact-hobby .yaksha,
+        body .contact-section .about-hobby .yaksha,
+        body .contact-section .contact-hobby .yaksha {
           margin-bottom: -0.2rem; }
-        body .about-section .about-hobby .emoji {
+        body .about-section .about-hobby .emoji,
+        body .about-section .contact-hobby .emoji,
+        body .contact-section .about-hobby .emoji,
+        body .contact-section .contact-hobby .emoji {
           font-size: 1rem;
           opacity: 0.6; }
-        body .about-section .about-hobby .text-link {
+        body .about-section .about-hobby .text-link,
+        body .about-section .contact-hobby .text-link,
+        body .contact-section .about-hobby .text-link,
+        body .contact-section .contact-hobby .text-link {
           text-decoration: none;
           font-style: italic;
           color: unset;
@@ -162,29 +184,62 @@ body {
           background-size: 200% 100%;
           background-position: right bottom;
           transition: all .5s ease-out; }
-          body .about-section .about-hobby .text-link:hover {
+          body .about-section .about-hobby .text-link:hover,
+          body .about-section .contact-hobby .text-link:hover,
+          body .contact-section .about-hobby .text-link:hover,
+          body .contact-section .contact-hobby .text-link:hover {
             background-position: left bottom;
             color: #ffffff; }
-      body .about-section .about-me-more {
+      body .about-section .about-me-more,
+      body .about-section .contact-me-more,
+      body .contact-section .about-me-more,
+      body .contact-section .contact-me-more {
         padding: 2rem 0;
         display: flex;
         width: 100%;
         justify-content: flex-start;
         font-size: 1.25rem; }
-        body .about-section .about-me-more .resume-info {
+        body .about-section .about-me-more .resume-info,
+        body .about-section .contact-me-more .resume-info,
+        body .contact-section .about-me-more .resume-info,
+        body .contact-section .contact-me-more .resume-info {
           padding-bottom: 0.5rem; }
-        body .about-section .about-me-more li {
+        body .about-section .about-me-more li,
+        body .about-section .contact-me-more li,
+        body .contact-section .about-me-more li,
+        body .contact-section .contact-me-more li {
           list-style: none; }
-          body .about-section .about-me-more li:hover .fa-js {
+          body .about-section .about-me-more li:hover .fa-js,
+          body .about-section .contact-me-more li:hover .fa-js,
+          body .contact-section .about-me-more li:hover .fa-js,
+          body .contact-section .contact-me-more li:hover .fa-js {
             color: #e8d44d; }
-          body .about-section .about-me-more li:hover .fa-sass {
+          body .about-section .about-me-more li:hover .fa-sass,
+          body .about-section .contact-me-more li:hover .fa-sass,
+          body .contact-section .about-me-more li:hover .fa-sass,
+          body .contact-section .contact-me-more li:hover .fa-sass {
             color: #c66394; }
-          body .about-section .about-me-more li:hover .fa-react {
+          body .about-section .about-me-more li:hover .fa-react,
+          body .about-section .contact-me-more li:hover .fa-react,
+          body .contact-section .about-me-more li:hover .fa-react,
+          body .contact-section .contact-me-more li:hover .fa-react {
             color: #5ed4f3d9; }
-          body .about-section .about-me-more li:hover .fa-angular {
+          body .about-section .about-me-more li:hover .fa-angular,
+          body .about-section .contact-me-more li:hover .fa-angular,
+          body .contact-section .about-me-more li:hover .fa-angular,
+          body .contact-section .contact-me-more li:hover .fa-angular {
             color: #db2f35; }
-          body .about-section .about-me-more li:hover .fa-vuejs {
+          body .about-section .about-me-more li:hover .fa-vuejs,
+          body .about-section .contact-me-more li:hover .fa-vuejs,
+          body .contact-section .about-me-more li:hover .fa-vuejs,
+          body .contact-section .contact-me-more li:hover .fa-vuejs {
             color: #40b27f; }
+    body .about-section .contact,
+    body .contact-section .contact {
+      color: #ffffff; }
+      body .about-section .contact-me,
+      body .contact-section .contact-me {
+        padding-bottom: 2rem; }
   body .header {
     text-align: center;
     padding-bottom: 3rem;
@@ -346,13 +401,24 @@ body {
         justify-content: center; }
     body nav .navbar-toggler {
       display: block; }
-  body .about-section .about-me {
+  body .about-section .about-me,
+  body .about-section .contact-me,
+  body .contact-section .about-me,
+  body .contact-section .contact-me {
     padding-bottom: 1rem; }
-  body .about-section .about-me-more {
+  body .about-section .about-me-more,
+  body .contact-section .about-me-more {
     flex-direction: column;
     padding: 0.5rem 0; }
-    body .about-section .about-me-more .resume-container {
+    body .about-section .about-me-more .resume-container,
+    body .contact-section .about-me-more .resume-container {
       padding-bottom: 1rem; }
+  body .about-section .contact-me,
+  body .contact-section .contact-me {
+    padding: 1rem; }
+  body .about-section .contact .social-icons,
+  body .contact-section .contact .social-icons {
+    font-size: 1rem; }
   body .work-container .brands {
     width: 100%;
     display: flex;
