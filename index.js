@@ -113,11 +113,11 @@ const toggleWorkedBrandsInfo = (id) => {
 const manageWorkedBrandsInfo = () => {
   const brandsIconArea = document.querySelectorAll(".brand-img");
   brandsIconArea.forEach((item) => {
-    item.addEventListener("click", (event) => {
+    item.addEventListener("mouseover", (event) => {
       toggleWorkedBrandsInfo(`${event.target.alt}-description`);
     });
   });
-  toggleWorkedBrandsInfo("pay-pay-description");
+  toggleWorkedBrandsInfo("paytm-description");
 };
 
 const initializeApp = () => {
