@@ -1,3 +1,3 @@
 module.export = {
-    publictPath: '/dist/'
+    publictPath: '/premnathkulal.github.io/'
 }
