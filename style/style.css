@@ -116,6 +116,8 @@ body {
         -webkit-text-fill-color: transparent !important; }
     body .social-icons .fa-instagram:hover {
       background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); }
+    body .social-icons .fa-youtube:hover {
+      background: #f24a48; }
     body .social-icons .fa-envelope:hover {
       background: #f24a48; }
     body .social-icons .fa-linkedin:hover {
@@ -160,12 +162,14 @@ body {
         body .about-section .contact-hobby .small-img,
         body .contact-section .about-hobby .small-img,
         body .contact-section .contact-hobby .small-img {
-          width: 1.65rem; }
-        body .about-section .about-hobby .yaksha,
-        body .about-section .contact-hobby .yaksha,
-        body .contact-section .about-hobby .yaksha,
-        body .contact-section .contact-hobby .yaksha {
-          margin-bottom: -0.2rem; }
+          width: 2rem;
+          padding-left: 0.5rem; }
+        body .about-section .about-hobby .medium-img,
+        body .about-section .contact-hobby .medium-img,
+        body .contact-section .about-hobby .medium-img,
+        body .contact-section .contact-hobby .medium-img {
+          width: 3rem;
+          padding-left: 0.5rem; }
         body .about-section .about-hobby .emoji,
         body .about-section .contact-hobby .emoji,
         body .contact-section .about-hobby .emoji,
@@ -176,6 +180,8 @@ body {
         body .about-section .contact-hobby .text-link,
         body .contact-section .about-hobby .text-link,
         body .contact-section .contact-hobby .text-link {
+          display: inline-flex;
+          align-items: center;
           text-decoration: none;
           font-style: italic;
           color: unset;
@@ -183,7 +189,7 @@ body {
           background: linear-gradient(to right, #14123d 49.3%, #ffffff 50%);
           background-size: 200% 100%;
           background-position: right bottom;
-          transition: all .5s ease-out; }
+          transition: all 0.5s ease-out; }
           body .about-section .about-hobby .text-link:hover,
           body .about-section .contact-hobby .text-link:hover,
           body .contact-section .about-hobby .text-link:hover,
@@ -263,6 +269,10 @@ body {
       border: 2px solid #14123d;
       color: #14123d;
       background: none; }
+  body .cv-info {
+    padding: 0.1rem 0;
+    font-size: 0.8rem;
+    opacity: 0.6; }
   body .my-work-section,
   body .contact-section,
   body .specialization-section {
@@ -345,6 +355,10 @@ body {
     font-weight: 600;
     text-align: center;
     padding: 1.5rem; }
+    body footer .fa-tools {
+      color: rgba(255, 255, 255, 0.7); }
+    body footer .fa-heart {
+      color: #f24a48; }
   body .hide-info {
     display: none; }
 
