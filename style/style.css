@@ -274,7 +274,9 @@ body {
     font-size: 0.8rem;
     opacity: 0.6; }
   body .my-work-section,
+  body .poster-craft,
   body .contact-section,
+  body .poster-craft-section,
   body .specialization-section {
     background: #040011;
     flex-direction: column;
@@ -284,7 +286,8 @@ body {
     align-items: center;
     display: flex;
     justify-content: center; }
-  body .my-work-section {
+  body .my-work-section,
+  body .poster-craft {
     background: #ffffff;
     color: #14123d; }
   body .work-container {
@@ -349,6 +352,19 @@ body {
     opacity: 0; }
   body .flex-1 {
     flex: 1; }
+  body .poster-craft-container {
+    margin-top: 4rem; }
+    body .poster-craft-container .poster-craft-image-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem; }
+      body .poster-craft-container .poster-craft-image-container .poster-craft-image {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        transition: transform 0.3s ease-in-out; }
+        body .poster-craft-container .poster-craft-image-container .poster-craft-image:hover {
+          transform: scale(1.05); }
   body footer {
     background: #14123d;
     color: #aca6a6;

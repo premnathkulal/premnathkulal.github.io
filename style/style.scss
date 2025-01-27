@@ -357,7 +357,9 @@ body {
   }
 
   .my-work-section,
+  .poster-craft,
   .contact-section,
+  .poster-craft-section,
   .specialization-section {
     background: $black;
     flex-direction: column;
@@ -366,7 +368,8 @@ body {
     @include flex-align-justify-center();
   }
 
-  .my-work-section {
+  .my-work-section,
+  .poster-craft {
     background: $white;
     color: $primary-blue;
   }
@@ -459,6 +462,27 @@ body {
 
   .flex-1 {
     flex: 1;
+  }
+
+  .poster-craft-container {
+    margin-top: 4rem;
+
+    .poster-craft-image-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+
+      .poster-craft-image {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
   }
 
   footer {

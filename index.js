@@ -1,3 +1,18 @@
+const images = [
+  "poster-0",
+  "poster-1",
+  "poster-2",
+  "poster-3",
+  "poster-4",
+  "poster-5",
+  "poster-6",
+  "poster-7",
+  "poster-8",
+  "poster-9",
+  "poster-10"
+];
+
+
 const setWelcomeMessage = () => {
   let count = 0;
   const welcomeText = [
@@ -10,6 +25,7 @@ const setWelcomeMessage = () => {
     "你好",
   ];
   const welcomeTextDocument = document.getElementById("greet-message");
+  if(welcomeTextDocument === null) return;
 
   setInterval(() => {
     welcomeTextDocument.classList.add("fade");
@@ -97,6 +113,7 @@ const handlePageScroll = () => {
     "scroll",
     () => {
       const scrollIndicator = document.getElementById("scroll-indicator");
+      if(scrollIndicator === null) return;
       scrollIndicator.style.display = "none";
       onScrollNavLinkHandler();
     },
@@ -106,13 +123,15 @@ const handlePageScroll = () => {
 
 const toggleWorkedBrandsInfo = (id) => {
   const brandsInfo = document.querySelectorAll(".brands-description");
-  brandsInfo.forEach((a) => a.classList.add("hide-info"));
+  if(!brandsInfo.length) return;
+  brandsInfo?.forEach((a) => a.classList.add("hide-info"));
   document.getElementById(id).classList.remove("hide-info");
 };
 
 const manageWorkedBrandsInfo = () => {
   const brandsIconArea = document.querySelectorAll(".brand-img");
-  brandsIconArea.forEach((item) => {
+  if(!brandsIconArea.length) return;
+  brandsIconArea?.forEach((item) => {
     item.addEventListener("mouseover", (event) => {
       toggleWorkedBrandsInfo(`${event.target.alt}-description`);
     });
@@ -120,11 +139,27 @@ const manageWorkedBrandsInfo = () => {
   toggleWorkedBrandsInfo("paytm-description");
 };
 
+const displayImagesInLoop = () => {
+  const imageContainer = document.getElementById("image-container");
+  if(imageContainer === null) return;
+  images.forEach((image, index) => {
+    const img = document.createElement("img");
+    img.src = `assets/poster-craft/${image}.png`;
+    img.alt = `image-${index}`;
+    img.classList.add("poster-craft-image");
+    imageContainer.appendChild(img);
+  });
+};
+
 const initializeApp = () => {
   navBarHandler();
   setWelcomeMessage();
   handlePageScroll();
   manageWorkedBrandsInfo();
+  displayImagesInLoop();
 };
 
 initializeApp();
+
+
+

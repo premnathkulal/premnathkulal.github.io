@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/56aebcbfcc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-C9263G2YJK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-C9263G2YJK");
+    </script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Premnath Kulal</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="navbar">
+        <a class="navbar-brand" href="#">
+          <img src="assets/my-logo.svg" alt="my-logo" width="35rem" />
+        </a>
+        <div class="navbar-contents" id="navbarSupportedContent">
+          <ul class="navbar-nav" id="nav-item">
+            <li class="nav-item active">
+              <a class="nav-link" href="/#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#about-section">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#my-work-section">My Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#poster-craft">Poster Craft</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#contact-section">Connect</a>
+            </li>
+          </ul>
+        </div>
+        <button
+          id="toggler-button"
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i id="menu-icon" class="fa fa-solid fa-bars fa-2x"></i>
+          <i id="times-icon" class="fa fa-solid fa-close fa-2x"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container poster-craft-container">
+      <section id="poster-craft" class="poster-craft">
+        <p class="header">Poster Craft I've made</p>
+        <div id="image-container" class="poster-craft-image-container"></div>
+      </section>
+    </div>
+
+    <footer>
+      <p>
+        Designed <i class="fa fa-solid fa-tools"></i> and developed
+        <i class="fa fa-solid fa-heart"></i> by Premnath
+      </p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
