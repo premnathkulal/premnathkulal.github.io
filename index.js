@@ -9,7 +9,8 @@ const images = [
   "poster-7",
   "poster-8",
   "poster-9",
-  "poster-10"
+  "poster-10",
+  "poster-11",
 ];
 
 
